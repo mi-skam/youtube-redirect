@@ -6,8 +6,6 @@ let basicUrl = /^(https:\/\/(?:www|m)\.youtube\.com)\/?(\?.+?)?(#.+?)?$/;
 function redirect(details) {
   if (details.method !== 'GET') return;
 
-  console.log("Get Storage: " + sessionStorage.getItem('visited'));
-
   let match = details.url.match(basicUrl);
   let visited = sessionStorage.getItem('visited');
 
